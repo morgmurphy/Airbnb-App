@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    <ion-title> User profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-avatar>
+  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+</ion-avatar>
+
+<ion-content>
+    <div class="ion-padding">
+        <p >Hi, I'm Morgan</p>
+        <p></p>
+        <p>About: Lives in New York, NY</p>
+        <p>Email: morgan@gmail.com</p>
+        <p>Phone number: 123-445-5679</p>
+        <p>Number of bookings: 10</p>
+        <p>Number of reviews recieved: 3 </p>
+        <p>List of reviews</p>
+        <ion-button expand="full" (click)="navToSaved()"> Saved</ion-button>
+        <ion-button expand="full" (click)="navToInbox()"> Inbox</ion-button>
+        <ion-button expand="full" (click)="navToExplore()"> Explore</ion-button>
+        <ion-button expand="full" (click)="navToTrips()"> Trips</ion-button>
+      </div>
+</ion-content>
