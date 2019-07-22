@@ -1,13 +1,40 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>explore</ion-title>
+    <ion-title>Explore</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
+    <div *ngFor="let listing of listings">
+      <ion-card>
+        <!-- <ion-slides pager = "true">
+          <ion-slide *ngFor = "let img of listing.imgUrl">
+              <img src="{{img}}" />
+          </ion-slide>
+        </ion-slides> -->
+        {{listing.name}} <br>
+        {{listing.location}}<br>
+        {{listing.description}}
+        R{{listing.price}}/night <br>
+      </ion-card>
+    </div>
+  
+    <br>
+  
+    <ion-button class="btn btn-primary" (click)="showHideListings()">Show/Hide Listings</ion-button>
+    <br>
+    <ion-button (click)="navToTrips()"> Trips</ion-button>
+    <ion-button (click)="navToInbox()"> Inbox</ion-button>
+    <ion-button (click)="navToProfile()"> Profile</ion-button>
+  
+  </ion-content>
+  
+
+<!-- <ion-content>
   <p>Explore</p>
-  <ion-button expand="full" (click)="navToSaved()"> Saved</ion-button>
-  <ion-button expand="full" (click)="navToTrips()"> Trips</ion-button>
-  <ion-button expand="full" (click)="navToInbox()"> Inbox</ion-button>
-  <ion-button expand="full" (click)="navToProfile()"> Profile</ion-button>
-</ion-content>
+  <ion-button (click)="navToSaved()"> Saved</ion-button>
+  <ion-button (click)="navToTrips()"> Trips</ion-button>
+  <ion-button (click)="navToInbox()"> Inbox</ion-button>
+  <ion-button (click)="navToProfile()"> Profile</ion-button>
+</ion-content> -->

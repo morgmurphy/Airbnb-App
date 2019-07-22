@@ -1,15 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>inbox</ion-title>
+    <ion-title>Inbox</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <p>Inbox</p>
+    <h1>Inbox</h1>
     <p>You have no unread messages</p>
-    <ion-button expand="full" (click)="navToExplore()"> Explore</ion-button>
-    <ion-button expand="full" (click)="navToSaved()"> Inbox</ion-button>
-    <ion-button expand="full" (click)="navToTrips()"> Trips</ion-button>
-    <ion-button expand="full" (click)="navToProfile()"> profile</ion-button>
+    <ion-button (click)="navToExplore()"> Explore</ion-button>
+    <ion-button (click)="navToSaved()"> Saved</ion-button>
+    <ion-button (click)="navToTrips()"> Trips</ion-button>
+    <ion-button (click)="navToProfile()"> profile</ion-button>
 
 </ion-content>
