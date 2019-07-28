@@ -3,7 +3,9 @@ import { NavController } from '@ionic/angular';
 
 import { ListingsService } from '../services/listings.service';
 import { Listing } from '../models/listing';
+import { reject } from 'q';
 //import { Explore } from '../explore/explore';
+//import { Listings } from '../services/listings.service'
 
 @Component({
   selector: 'app-explore',
@@ -37,6 +39,11 @@ export class ExplorePage implements OnInit {
   }
   navToInbox() {
     this.NavCtrl.navigateForward("inbox");
+  }
+
+  findPropertyById(id) {
+    this.listingsService.setListingId(id)
+    this.NavCtrl.navigateForward("details");
   }
   
 

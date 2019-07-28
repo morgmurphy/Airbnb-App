@@ -8,9 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class ListingsService {
   // variable instantiation
   listings: Array<Listing>;
-  // listing1 = new Listing('Apartment in Cape Town', 'Cape Town - CBD', 750, 'assets/home1.jpg');
-  // listing2 = new Listing('Newlands town house', 'Cape Town - Newlands', 300, 'assets/home2.jpg');
-  // listing3 = new Listing('2 Bedroom flat', 'Cape Town - Wynburg', 350, 'assets/home3.jpg');
+  public listingId: number;
   
   constructor(
     private httpClient: HttpClient
@@ -24,9 +22,10 @@ export class ListingsService {
   getAllListings() {
     return new Promise((resolve, reject) => {
       this.httpClient
-      .get("http://localhost:5000/api/listings/")
+      .get("http://localhost:5000/api/listings/getAllListings")
       .subscribe(
         (response: Listing[]) => {
+          console.log(response)
           resolve(response);
         },
         (err) => {
@@ -52,4 +51,14 @@ export class ListingsService {
       )
     })
   }
+  setListingId(id) {
+    this.listingId = id;
+  }
+  // findPropertyById(id){
+  //   this.getListingById(id).then(listing => {
+  //     res.send(listing) 
+  //   })
+  // }
+
+
 }

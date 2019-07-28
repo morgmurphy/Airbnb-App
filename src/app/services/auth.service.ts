@@ -19,7 +19,7 @@ export class AuthService {
       const headers = new HttpHeaders();
 
       this.httpClient
-        .post('http://localhost:5000/api/auth/login', authUser, { headers })
+        .post('http://localhost:5000/api/auth/login/user', authUser, { headers })
         .subscribe(
           (response: any) => {
             console.log(response.id);
@@ -41,7 +41,7 @@ export class AuthService {
       const headers = new HttpHeaders();
 
       this.httpClient
-        .post('http://localhost:5000/api/auth/register', authUser, { headers })
+        .post('http://localhost:5000/api/auth/register/user', authUser, { headers })
         .subscribe(
           (response: any) => {
             console.log(response.id);

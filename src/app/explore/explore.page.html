@@ -6,23 +6,23 @@
 
 
 <ion-content>
-    <div *ngFor="let listing of listings">
-      <ion-card>
-        <!-- <ion-slides pager = "true">
+    <div *ngFor="let listing of listings" (click)="findPropertyById(listing.id)">
+      <ion-card align = "center">
+        <ion-slides pager = "true">
           <ion-slide *ngFor = "let img of listing.imgUrl">
-              <img src="{{img}}" />
+              <img src={{img}} />
           </ion-slide>
-        </ion-slides> -->
-        {{listing.name}} <br>
+        </ion-slides>
+        <h2><b>{{listing.name}}</b></h2> <br>
         {{listing.location}}<br>
-        {{listing.description}}
-        R{{listing.price}}/night <br>
+        <!-- {{listing.description}}<br>
+        R{{listing.price}}/night <br> -->
       </ion-card>
     </div>
   
     <br>
   
-    <ion-button class="btn btn-primary" (click)="showHideListings()">Show/Hide Listings</ion-button>
+    <!-- <ion-button class="btn btn-primary" (click)="showHideListings()">Show/Hide Listings</ion-button> -->
     <br>
     <ion-button (click)="navToTrips()"> Trips</ion-button>
     <ion-button (click)="navToInbox()"> Inbox</ion-button>
